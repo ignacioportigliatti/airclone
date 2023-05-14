@@ -1,9 +1,9 @@
 'use client'
 
 import { Container } from "../Container"
-import { Logo } from "./Logo"
-import { Search } from "./Search"
-import { UserMenu } from "./UserMenu"
+import { Logo } from "./"
+import { Search } from "./"
+import { UserMenu } from "./"
 
 
 interface Props {
