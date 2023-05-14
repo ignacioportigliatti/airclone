@@ -1,6 +1,10 @@
+'use client'
+
 import { Nunito } from 'next/font/google'
 import './globals.css'
-import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components';
+import { ClientOnly } from './components/ClientOnly';
+import { Modal } from './components/modals/Modal';
 
 export const metadata = {
   title: 'Airbnb',
@@ -19,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <ClientOnly>
+          <Modal isOpen title='Login' actionLabel='Submit'/>
+          <Navbar />
+        </ClientOnly>
         {children}
       </body>
     </html>

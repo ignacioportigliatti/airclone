@@ -7,3 +7,19 @@ body,
 :root {
   height: 100%;
 }
+
+@layer components {
+  .menu-item {
+    @apply px-4 py-3 hover:bg-neutral-100 transition font-semibold
+  }
+}
+
+.menu-item {
+  padding: 0.75rem 1rem;
+  transition: background-color 0.15s ease-in-out;
+  font-weight: 600;
+}
+
+.menu-item:hover {
+  background-color: #f7fafc;
+}
